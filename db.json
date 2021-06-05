@@ -1,0 +1,68 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Archie",
+      "gender": "Male",
+      "email": "arch@gmail.com",
+      "phoneNumber": 9033399985,
+      "contactPref": "Email",
+      "dob": "20/12/1992",
+      "department": "2",
+      "isActive": true,
+      "photoPath": "assets/images/u2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "ronni",
+      "gender": "Female",
+      "email": "ronni@gmail.com",
+      "phoneNumber": 9033399985,
+      "contactPref": "Email",
+      "dob": "20/12/1992",
+      "department": "1",
+      "isActive": true,
+      "photoPath": "assets/images/u1.png"
+    },
+    {
+      "id": 3,
+      "name": "Kevin",
+      "gender": "Male",
+      "email": "arch@gmail.com",
+      "phoneNumber": 9833399985,
+      "contactPref": "Phone",
+      "dob": "25/12/1991",
+      "department": "1",
+      "isActive": true,
+      "photoPath": "assets/images/u3.png"
+    },
+    {
+      "id": 4,
+      "name": "jay",
+      "password": "85",
+      "pwdConfirm": "85",
+      "gender": "Male",
+      "email": "kuruprajapati54@gmail.com",
+      "phoneNumber": "9033399985",
+      "contactPref": "Email",
+      "dob": "20/12/1992",
+      "department": "2",
+      "isActive": true,
+      "photoPath": "assets/images/u2.jpg"
+    },
+    {
+      "id": 5,
+      "name": "yuval",
+      "password": "25",
+      "pwdConfirm": "25",
+      "gender": "Male",
+      "email": "yuv@gcf.com",
+      "phoneNumber": "9856325698",
+      "contactPref": "Email",
+      "dob": "2020-04-01T18:30:00.000Z",
+      "department": "2",
+      "isActive": true,
+      "photoPath": "assets/images/u2.jpg"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Post List</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Slug</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cat of categoris">
+                        <td>{{cat.id}}</td>
+                        <td>{{cat.name}}</td>
+                        <td>{{cat.slug}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            
+            <!-- List: {{categoris | json}} -->
+        </div>
+
+    </div>
+    <div class="panel-footer">
+        <div>
+            <a class="btn btn-primary" routerlink="createpost">Create</a>
+        </div>
+    </div>
+
+</div>
+
+

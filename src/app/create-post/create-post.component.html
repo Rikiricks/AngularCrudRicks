@@ -1,0 +1,26 @@
+<form #postForm="ngForm" (ngSubmit)= "savePost(postModel)">
+<div class="panel panel-primary">
+    
+    <div class="panel-heading">
+        <h3 class="panel-title">Create Post</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" id="TITLE" name="TITLE" class="form-control" [(ngModel)]="postModel.TITLE" >
+        </div>
+        <div class="form-group">
+            <label>Desc</label>
+            <input type="text" id="DESCRIPTION" name="DESCRIPTION" class="form-control" [(ngModel)]="postModel.DESCRIPTION" >
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <input type="text" id="CATEGORY_ID" name="CATEGORY_ID" class="form-control" [(ngModel)]="postModel.CATEGORY_ID" >
+        </div>
+    </div>
+    <div class="panel-footer">
+        <button type="submit"  class="btn btn-primary">Save</button> 
+        <!-- [disabled]="employeeForm.invalid" -->
+    </div>
+</div>
+</form>

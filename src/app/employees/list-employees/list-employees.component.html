@@ -1,0 +1,31 @@
+<button (click)="chnageEmpName()" [style.margin-bottom]="'10px'" class="btn btn-primary">Change Employee Nmae</button>
+<div class="form-group">
+    <input type="text" placeholder="search here" class="form-control" [(ngModel)]="searchTerm">
+</div>
+<div>
+    {{errorMsj}}
+    </div>
+<!-- <div *ngFor="let emp of employees | employeeFilter:searchTerm"> -->
+<div *ngFor="let emp of filteredEmployees">
+    
+<div [style.cursor]="'pointer'">
+    
+    <app-display-employee #currEmp [emp]="emp" [searchTerm]="searchTerm" (notifyDelete)="onDeletion($event)"></app-display-employee>
+    
+</div>
+</div>
+
+
+
+
+<!-- <button (click)="nextEmployee()" [style.margin-bottom]="'10px'" class="btn btn-primary">Next Employee</button>
+<button (click)="h1Label.innerHTML = currEmp.emp?.name+' '+currEmp.emp?.email +' '+ currEmp.getNumber()" [style.margin-bottom]="'10px'" class="btn btn-info">Get Employee</button>
+<h1 *ngIf="currentEmp">
+    {{currentEmp?.name }} {{currentEmp?.email}}
+</h1>
+<h1 #h1Label style="background-color:floralwhite;">
+    
+</h1>
+<div (click)="employeeDetail(currEmp.emp?.id)" [style.cursor]="'pointer'">
+    <app-display-employee (notify)="handleNotify($event)" #currEmp [emp]="employeeToDisplay" [empId]="employeeToDisplay.id"></app-display-employee>
+</div> -->

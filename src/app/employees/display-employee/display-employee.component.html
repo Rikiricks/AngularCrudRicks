@@ -1,0 +1,118 @@
+<app-accordian [isHidden]="false" [title]="emp.name" [justViewed]="selectedId === emp.id">
+    <div class="col-xs-10 panelBody">
+        <div class="row vertical-align">
+            <div class="col-xs-4">
+                <img class="imageClass" [src]="emp.photoPath" />
+            </div>
+        </div>
+        <div class="col-xs-8">
+            <div class="row">
+                <div class="col-xs-6">
+                    Gender:
+                </div>
+                <div class="col-xs-6">
+                    {{emp.gender}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    DOB:
+                </div>
+                <div class="col-xs-6">
+                    {{emp.dob}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    Contact:
+                </div>
+                <div class="col-xs-6">
+                    {{emp.phoneNumber}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    Department:
+                </div>
+                <div class="col-xs-6" [ngSwitch]="emp.department">
+                    <span *ngSwitchCase="1">IT</span>
+                    <span *ngSwitchCase="2">Account</span>
+                    <span *ngSwitchCase="2">, Payrole</span>
+                    <span *ngSwitchCase="3">HR</span>
+                    <span *ngSwitchCaseDefault>N/A</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panelFooter">
+        <!-- <a [routerLink]="['/employee', emp.id]"><button class="btn btn-primary" >View</button></a> -->
+        <button (click)="viewEmployee()" class="btn btn-primary" >View</button>
+        <button (click)="editEmployee()" class="btn btn-primary">Edit</button>
+        <button (click)="deleteEmployee()" class="btn btn-danger">Delete</button>
+    </div>
+</app-accordian>
+
+<!-- <div class="panel panel-primary" (click)="isHidden = !isHidden" [class.panel-success]="selectedId === emp.id">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{emp.name}}</h3>
+    </div>
+    <div class="panel-body" [hidden]="isHidden">
+        <div class="col-xs-10">
+            <div class="row vertical-align">
+                <div class="col-xs-4">
+                    <img class="imageClass" [src]="emp.photoPath" />
+                </div>
+            </div>
+            <div class="col-xs-8">
+                <div class="row">
+                    <div class="col-xs-6">
+                        Gender:
+                    </div>
+                    <div class="col-xs-6">
+                        {{emp.gender}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        DOB:
+                    </div>
+                    <div class="col-xs-6">
+                        {{emp.dob | date}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Contact:
+                    </div>
+                    <div class="col-xs-6">
+                        {{emp.phoneNumber}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Department:
+                    </div>
+                    <div class="col-xs-6" [ngSwitch]="emp.department">
+                        <span *ngSwitchCase="1">IT</span>
+                        <span *ngSwitchCase="2">Account</span>
+                        <span *ngSwitchCase="2">, Payrole</span>
+                        <span *ngSwitchCase="3">HR</span>
+                        <span *ngSwitchCaseDefault>N/A</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="panel-footer" [hidden]="isHidden">
+        <div>
+        <button (click)="viewEmployee()" class="btn btn-primary" >View</button>
+        <button (click)="editEmployee()" class="btn btn-primary">Edit</button>
+        <button (click)="deleteEmployee()" class="btn btn-danger">Delete</button>
+    </div>
+    </div>
+</div> -->
